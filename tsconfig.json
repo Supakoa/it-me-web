@@ -29,6 +29,9 @@
       "@lib/*": [
         "types/lib/*"
       ],
+      "@database/*": [
+        "database/*"
+      ]
     }
   },
   "include": [
