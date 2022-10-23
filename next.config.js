@@ -1,7 +1,17 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-}
+const DB_DOMAIN = 'cluster0.a0z3cim.mongodb.net';
+const DB_USERNAME = 'vercel-admin-user';
+const DB_PASSWORD = 'ZGLh4V57hbWrGqpU';
 
-module.exports = nextConfig
+const env = {
+  DB_URL: `mongodb+srv://${DB_USERNAME}:${DB_PASSWORD}@${DB_DOMAIN}/?retryWrites=true&w=majority`,
+  DB_DATABASE: 'it_me',
+};
+
+const nextConfig = {
+  reactStrictMode: false,
+  swcMinify: true,
+  env,
+};
+
+module.exports = nextConfig;
